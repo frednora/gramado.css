@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+:root {
+    /* gray scale */
+    --g_black:  #000000;  /*preto*/
+    --g_gray1:  #202020;  /*cinza mais escuro*/
+    --g_gray2:  #404040;  /*cinza*/
+    --g_gray3:  #606060;  /*cinza*/
+    --g_gray4:  #808080;  /*cinza*/
+    --g_gray5:  #a0a0a0;  /*cinza*/
+    --g_gray6:  #c0c0c0;  /*cinza*/
+    --g_gray7:  #e0e0e0;  /*cinza mais clarinho*/
+    --g_white:  #ffffff;  /*branco*/
+}
+
+/*
+ * gramado.css minimalist css library.
+ * Created by Fred Nora.
+ * (This is a work in progress)
+ */
+
+/*
+ * Library components:
+ *   + ) Global scope. (main html elements)
+ *   + ) .g_nav class. (Navigation bar)
+ *   + ) .g_header class. (Main header)
+ *   + ) .g_button class. (Buttons)
+ *   + ...
+ *   + ) .g_footer class. (Main footer)
+ */
+
+/*
+ * Component: 
+ *     Global scope.
+ */
+
+html, body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--g_white);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #0069d6;
+}
+
+a:hover {
+    color: #0050a3;
+}
+
+/* 
+ * Small screen:
+ * Mobile first?
+ */
+
+/* navigation bar for small screens */
+.g_nav {
+    font-size: 4.0vw;
+    border-top: 2px solid rgba(88, 88, 88, .3);
+    border-bottom: 2px solid rgba(129, 129, 129, .3);
+}
+
+.g_nav ul {
+    text-align: center;
+    margin: 0;
+}
+
+.g_nav li {
+    width: fit-content;
+    text-align: center;
+    display: block;
+    padding: 0.4% 0.2% 0.2% 0.2%;
+}
+
+.g_nav a {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--g_gray4);
+    display: inline-block;
+}
+
+.g_nav a:hover {
+    background-color: rgba(200, 200, 200, .6); 
+}
+
+.g_container {
+    text-align: center;
+}
+
+.g_header {
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--g_gray6);
+}
+
+.g_text {
+    font-size: 2.0vw;
+}
+
+.g_image {
+    width: 75%;
+    height: auto;
+}
+
+.g_image_container {
+    text-align: center;
+    border-top: 4px solid rgba(222, 222, 222, .3);
+}
+
+.g_button {
+    text-align: center;
+    color: var(--g_white);
+    background-color: #007bff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(0, 0, 0, 0.25);
+    border-radius: .25rem;
+    padding: .375rem .75rem;
+    display: inline-block;
+}
+
+.g_button:hover {
+    background-color: #0069d9;
+    text-decoration: none;
+}
+
+.g_button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px lightskyblue;
+}
+
+.g_button:active {
+    background-color: #333;
+    border-color: #333;
+    color: #eee;
+}
+
+.g_footer {
+    font-size: 1.5vw;
+    text-align: center;
+    color: var(--g_gray4);
+    padding-bottom: 2%;
+}
+
+/*
+ * ------------------------------------------------------
+ * Component: Media queries. 
+ */
+
+/* large screen */
+@media (min-width: 640px) {
+
+    /* navigation bar for large screens */
+    .g_nav {
+        font-size: 2.0vw;
+        border-top: 2px solid rgba(80, 80, 80, .3);
+        border-bottom: 2px solid rgba(123, 123, 123, .3);
+    }
+
+    .g_nav ul {
+        text-align: center;
+        margin: 0;
+    }
+
+    .g_nav li {
+        text-align: center;
+        display: inline;
+        padding: 0 2%;
+    }
+
+    .g_nav a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--g_gray2);
+        display: inline-block;
+    }
+
+    .g_nav a:hover {
+        background-color: rgba(200, 200, 200, .6); 
+    }
+
+    .g_header {
+        font-size: 1.0vw;
+        color: var(--g_gray2);
+    }
+
+    .g_text {
+        font-size: 0.9vw;
+    }
+
+    .g_image {
+        width: 75%;
+        height: auto;
+    }
+
+    .g_image_container {
+        text-align: center;
+        border-top: 4px solid rgba(222, 222, 222, .3);
+    }
+
+    .g_button {
+        text-align: center;
+        color: var(--g_white);
+        background-color: #007bff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-bottom-color: rgba(0, 0, 0, 0.25);
+        border-radius: .25rem;
+        padding: .375rem .75rem;
+        display: inline-block;
+    }
+
+    .g_button:hover {
+        background-color: #0069d9;
+        text-decoration: none;
+    }
+
+    .g_button:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px lightskyblue;
+    }
+
+    .g_button:active {
+        background-color: #333;
+        border-color: #333;
+        color: #eee;
+    }
+
+    .g_footer {
+        font-size: 0.8vw;
+        text-align: center;
+        color: var(--g_gray4);
+        padding-bottom: 2%;
+    }
+}
